@@ -5,7 +5,8 @@ import Home from '../views/home';
 
 const mapStateToProps = (state) => {
 	return {
-		projects: state.projects
+		projects: state.projects,
+		issues: state.issues
 	};
 }
 

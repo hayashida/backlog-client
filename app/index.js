@@ -13,7 +13,7 @@ exapp.use(express.static('app'));
 exapp.listen(port);
 
 let win = null;
-process.env.NODE_ENV = process.env_NODE_ENV ? process.env.NODE_ENV : 'development';
+process.env.NODE_ENV = process.env_NODE_ENV || 'development';
 
 function createWindow() {
 	win = new BrowserWindow({ width: 800, height: 600 });

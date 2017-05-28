@@ -7,11 +7,11 @@ export default class Projects extends Component {
 			<div className="projectsComponent">
 				<h3>Projects</h3>
 				<ul>
-					{data.map(project => (
-						<li key={ project.id }>
-							<a href="#">{ project.name }</a>
-						</li>
-					))}
+				{data.map(project => (
+					<li key={ project.id }>
+						<a href="#">{ project.name }</a>
+					</li>
+				))}
 				</ul>
 			</div>
 		);
