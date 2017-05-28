@@ -5,12 +5,15 @@ import url from 'url';
 
 import express from 'express';
 
+import AppConfig from './js/config/app';
+
 let exapp = express();
-let port = 1212;
+let port = AppConfig.webport || 8080;
 exapp.use(express.static('app'));
 exapp.listen(port);
 
 let win = null;
+process.env.NODE_ENV = process.env_NODE_ENV ? process.env.NODE_ENV : 'development';
 
 function createWindow() {
 	win = new BrowserWindow({ width: 800, height: 600 });

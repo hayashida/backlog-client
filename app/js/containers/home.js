@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 
-export default () => (
-	<h2>
-		Home
-	</h2>
-);
+import Home from '../views/home';
+
+const mapStateToProps = (state) => {
+	return {
+		projects: state.projects
+	};
+}
+
+export default connect(mapStateToProps)(Home);

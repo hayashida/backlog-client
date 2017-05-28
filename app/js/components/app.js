@@ -1,11 +1,11 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
-import Header from '../components/header';
+import Header from './header';
 
 export default ({ children }) => (
 	<div className="wrapper">
 		<Header />
-		<main>
+		<main id="mainComponent">
 			{ children }
 		</main>
 	</div>

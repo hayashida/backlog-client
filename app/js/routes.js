@@ -1,18 +1,23 @@
+import 'babel-polyfill';
+
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Switch } from 'react-router';
+import { Router, Route } from 'react-router';
 import { createHashHistory } from 'history';
 
-import App from './containers/app';
-import Home from './containers/home';
+import { Provider } from 'react-redux';
+import { store } from './redux';
 
-const history = createHashHistory();
+import App from './components/app';
+import Home from './containers/Home';
+
 render((
-	<Router history={ history }>
-		<App>
-			<Switch>
-				<Route exact path="/" component={ Home } />
-			</Switch>
-		</App>
-	</Router>
+	<Provider store={ store }>
+		<Router history={ createHashHistory() }>
+			<App>
+				<Route path="/" component={ Home } />
+			</App>
+		</Router>
+	</Provider>
 ), document.querySelector('#root'));
+

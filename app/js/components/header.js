@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-export default class Headedr extends Component {
-	render() {
-		return (
-			<header>
-				<h1>Backlog Client</h1>
-			</header>
-		);
-	}
-}
+export default () => (
+	<header id="headerComponent">
+		<h1>Backlog Client</h1>
+	</header>
+);
