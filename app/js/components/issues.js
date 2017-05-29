@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Issues extends Component {
 	render() {
 		const { data } = this.props;
-		console.log(data);
 		return  (
 			<div className="issueComponent">
 				<h3>Issues</h3>

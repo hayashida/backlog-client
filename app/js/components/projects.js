@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Projects extends Component {
 	render() {
@@ -9,7 +10,7 @@ export default class Projects extends Component {
 				<ul>
 				{data.map(project => (
 					<li key={ project.id }>
-						<a href="#">{ project.name }</a>
+						<Link to={ `/project/${ project.id }` }>{ project.name }</Link>
 					</li>
 				))}
 				</ul>
