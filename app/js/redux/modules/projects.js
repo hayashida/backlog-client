@@ -20,7 +20,10 @@ import BacklogConfig from '../../config/backlog';
 
 export function fetchProjects() {
 	return dispatch => {
-		request.get(`https://${BacklogConfig.space}.backlog.jp/api/v2/projects?apiKey=${BacklogConfig.apiKey}`)
+		request.get(`https://${BacklogConfig.space}.backlog.jp/api/v2/projects`)
+			.query({
+				apiKey: BacklogConfig.apiKey
+			})
 			.end((err, res) => {
 				let items = res.body.map(data => {
 					return {

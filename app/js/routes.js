@@ -2,7 +2,7 @@ import 'babel-polyfill';
 
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Router, Switch, Route } from 'react-router';
+import { Router, Switch, Route } from 'react-router-dom';
 import { createHashHistory } from 'history';
 
 import { Provider } from 'react-redux';
@@ -17,8 +17,8 @@ render((
 		<Router history={ createHashHistory() }>
 			<App>
 				<Switch>
+					<Route exact path="/" component={ Home } />
 					<Route path="/project/:id" component={ Project } />
-					<Route path="/" component={ Home } />
 				</Switch>
 			</App>
 		</Router>
